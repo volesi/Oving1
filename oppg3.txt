@@ -1,0 +1,11 @@
+-Why concurrency?
+To model parallellism in the real world
+Fully utelize the processor
+To allow more than one processor to solva a problem
+
+-Makes programming simple by
+creating an easier idea to code transformation
+
+
+-Makes programming harder by
+Harder to debug
