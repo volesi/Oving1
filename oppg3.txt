@@ -2,10 +2,33 @@
 To model parallellism in the real world
 Fully utelize the processor
 To allow more than one processor to solva a problem
+Can increase efficiency 
 
--Makes programming simple by
-creating an easier idea to code transformation
+-Makes programming simple by:
+creating an easier idea to code transformation.
+Having processes running at the same time
 
-
--Makes programming harder by
+-Makes programming harder by:
 Harder to debug
+Managing shared resorces
+
+-What are the differences between processes, threads, green threads, and fibers?
+Processes controlled by the OS
+Threads native threads, controlled by the OS
+Green threads are like threads except they are controlled by the application rather than the OS. 
+Fibers light weight threads
+
+-Which one of these do pthread_create() (C/POSIX), threading.Thread() (Python), go (Go) create?
+Python: green threads
+C/POSIX: thread
+Go: psudo green threads/fibers
+
+-How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
+Prevents several native threads can excecute at once. It makes sure the memory is safe, but stops multithreaded programs from functioning optimally.
+Only one thread is executed at the same time.
+
+-With this in mind: What is the workaround for the GIL (Hint: it's another module)? How do you then share resources (variables/data)?
+The multiprocessing module. Creates subprosseces instead of threads, which do the same things as threads, but are not threads.
+
+-What does func GOMAXPROCS(n int) int change?
+Limits the amount of OS threads that can execute user-level go code simultaneously.
